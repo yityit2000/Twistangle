@@ -61,9 +61,9 @@ public class Triangle {
 	}
 
 	public void shoot() {
-		Projectile p1 = new Projectile(240 + MathUtils.cosDeg(angle + 90) * 100, 400 + MathUtils.sinDeg(angle + 90) * 100, angle + 90,0);
-		Projectile p2 = new Projectile(240 + MathUtils.cosDeg(angle + 120 + 90) * 100, 400 + MathUtils.sinDeg(angle + 120 + 90) * 100, angle + 120 + 90,1);
-		Projectile p3 = new Projectile(240 + MathUtils.cosDeg(angle + 240 + 90) * 100, 400 + MathUtils.sinDeg(angle + 240 + 90) * 100, angle + 240 + 90,2);
+		Projectile p1 = new Projectile(x + MathUtils.cosDeg(angle + 90) * 100, y + MathUtils.sinDeg(angle + 90) * 100, angle + 90,0);
+		Projectile p2 = new Projectile(x + MathUtils.cosDeg(angle + 120 + 90) * 100, y + MathUtils.sinDeg(angle + 120 + 90) * 100, angle + 120 + 90,1);
+		Projectile p3 = new Projectile(x + MathUtils.cosDeg(angle + 240 + 90) * 100, y + MathUtils.sinDeg(angle + 240 + 90) * 100, angle + 240 + 90,2);
 		projectiles.add(p1);
 		projectiles.add(p2);
 		projectiles.add(p3);

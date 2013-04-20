@@ -1,5 +1,6 @@
 package com.dvoragames.twistangle;
 
+import com.badlogic.gdx.math.Circle;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Rectangle;
 
@@ -7,7 +8,7 @@ public class Projectile {
 	private float x, y;
 	float angle;
 	private boolean visible;
-	public static Rectangle r;
+	private Circle circ;
 	private float PROJECTILESPEED = 8;
 	private int color;
 	
@@ -21,7 +22,7 @@ public class Projectile {
 		angle = rotation;
 		color = c;
 		visible = true;	
-		r = new Rectangle(0,0,0,0);
+		circ = new Circle();
 	}
 	
 	public int getColor() {
@@ -31,15 +32,7 @@ public class Projectile {
 	public void setColor(int color) {
 		this.color = color;
 	}
-
-	public Rectangle getR() {
-		return r;
-	}
-
-	public void setR(Rectangle r) {
-		this.r = r;
-	}
-  
+	
 	public void update(){
 		
 		if (angle < 0){
